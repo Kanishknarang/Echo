@@ -79,7 +79,7 @@ class NavigationDrawerAdapter(_contentList: ArrayList<String>,_getImages: IntArr
             }
             MainActivity.Statified.drawerLayout?.closeDrawers()
         })
-//test
+
     }
 
     class NavViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
