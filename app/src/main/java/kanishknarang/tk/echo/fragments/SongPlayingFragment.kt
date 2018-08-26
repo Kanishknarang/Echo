@@ -276,6 +276,10 @@ class SongPlayingFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if(mediaPlayer != null){
+            mediaPlayer?.stop()
+        }
         Statified.mSensorManager = Statified.myActivity?.getSystemService(Context.SENSOR_SERVICE) as SensorManager
 
         mAcceleration = 0.0f
@@ -320,6 +324,8 @@ class SongPlayingFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+
         var path: String?=null
         var _songTitle: String?=null
         var _songArtist: String?=null
